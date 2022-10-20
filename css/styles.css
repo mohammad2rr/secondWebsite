@@ -1,0 +1,742 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "caveat";
+  src: url("../fonts/caveat.regular-webfont.woff2") format("woff2"),
+    url("../fonts/caveat.regular-webfont.woff") format("woff"),
+    url("../fonts/caveat.regular.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family:open_sansregular ;
+ 
+}
+html,body{
+  scroll-behavior: smooth;
+}
+/* fixed-button */
+.fixed-button{
+  width: 50px;
+  height: 50px;
+  background-color: #425719ad;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 95px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* header */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/healthy-lifestyle-m.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  animation: change 14s infinite linear;
+  margin-top: 120px;
+}
+@keyframes change {
+  0%,
+  40% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/healthy-lifestyle-m.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  50%,
+  90% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/yoga_me.jpg) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+/* nav */
+nav {
+  width: 100%;
+  height: 120px;
+  padding: 0 120px;
+  background-color: #acd464;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+nav > .logo-box1 {
+  display: block;
+  width: 300px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav > a > img {
+  width: 100%;
+  display: block;
+}
+nav > .logo-box2 {
+  display: none;
+}
+
+.icons {
+  width: 100px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 25px;
+  display: none;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  font-size: 17px;
+}
+nav > ul > li {
+  margin-left: 30px;
+  position: relative;
+  display: flex;
+  font-family: "open_sansregular";
+}
+nav > ul > li > a {
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+nav > ul > li > a > i {
+  font-size: 11px;
+  color: white;
+}
+nav > ul > li > a > span {
+  border: 1px solid white;
+  padding: 10px;
+}
+nav > ul > li > ul {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: -10px;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+nav > ul > li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+nav > ul > li > ul > li > a {
+  display: flex;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: white;
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+nav > ul > li > ul > li > a:hover {
+  background-color: #f9f9f9;
+  color: black;
+}
+/* content */
+.content-wrapper {
+  width: 700px;
+  min-height: 300px;
+
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.content-wrapper > h2 {
+  font-family: "caveat";
+  font-size: 70px;
+}
+.content-wrapper > p {
+  font-size: 27px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 40px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn1 {
+  margin-right: 10px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn2 {
+  background-color: #719430;
+  border: 2px solid #719430;
+}
+/* angel */
+header > a > div > i {
+  font-size: 40px;
+  animation: angel 3s infinite;
+  color: white;
+  position: absolute;
+  top: 0%;
+  left: 11%;
+  opacity: 1;
+}
+/* animation of angel */
+@keyframes angel {
+  0% {
+    top: 0;
+    left: 11%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 62%;
+    left: 11%;
+    opacity: 0;
+  }
+}
+header > a > div {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  top: 86.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* separator-1-2 */
+.separetor {
+  width: 100%;
+  height: 20px;
+  background-color: #719430;
+  position: relative;
+}
+.seperator-right {
+  width: 25%;
+  height: 20px;
+  background-color: #acd464;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.seperator-right::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-color: #92bb46;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+.seperator-right::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-color: #e1fbb2;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+/* mian */
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about1 {
+  width: 50%;
+  min-height: 500px;
+  background-color: white;
+  padding: 100px;
+}
+.about1 > h2 {
+  font-family: "caveat";
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+.about1 > h2 > span {
+  color: #89a653;
+}
+.about1 > p > a {
+  color: #89a653;
+}
+.about1 > p:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+.about1 > p:last-child {
+  font-family: "caveat";
+  color: #89a653;
+  font-size: 30px;
+  margin-top: 60px;
+}
+.about2 {
+  width: 50%;
+  min-height: 500px;
+
+  background: url(../images/woman-enjoying-nature-outdoors-m-1-845x684.jpg)
+    no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 100px;
+}
+.about2 > h2 {
+  font-family: caveat;
+  font-size: 70px;
+  font-weight: normal;
+}
+.about2 > p {
+  max-width: 250px;
+  line-height: 25px;
+  margin-top: 25px;
+}
+.btn-about {
+  color: white;
+  border: 2px solid white;
+  margin-top: 150px;
+}
+/* What I can do for you */
+.services-wrapper {
+  width: 100%;
+  min-height: 550px;
+}
+.services-top {
+  width: 100%;
+  height: 150px;
+  background-color: #719430;
+}
+.services-top-content {
+  width: 60%;
+  height: 100%;
+  background-color: #92bb46;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-top-content > span {
+  
+  padding: 20px 20px;
+  color: white;
+  font-family: caveat;
+  font-size: 50px;
+}
+/* galerry */
+.srvices-galerry-wrapper {
+  width: 100%;
+  min-height: 400px;
+  background-color: #92bb46;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+}
+.galerry-wrapper-img-box {
+  width: 32%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.galerry-wrapper-img-box > img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  transition: 0.6s;
+}
+.galerry-wrapper-img-box:hover > img {
+  transform: scale(1.1);
+}
+.img-box-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  opacity: 1;
+  transition: 0.6s;
+}
+.galerry-wrapper-img-box:hover > .img-box-shadow {
+  opacity: 0;
+}
+/* services-details */
+.details {
+  width: 100%;
+  min-height: 500px;
+  background-image: url(../images/food-bg-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+.box {
+  width: 30%;
+  min-height: 200px;
+  margin: 20px 0;
+
+  position: relative;
+}
+.box > h2,
+.box > p {
+  margin-left: 100px;
+  margin-top: 20px;
+  max-width: 200px;
+}
+.box > i {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  line-height: 70px;
+  top: 20px;
+  left: 0;
+  font-size: 30px;
+  border-radius: 50%;
+}
+/* should konw */
+.parent{
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  background-color: white;
+
+}
+.img{
+  width: 50%;
+  height: 100%;
+  background: url(../images/yoga_me-1030x687.jpg) no-repeat center center;
+  background-size: cover;
+}
+.should-know{
+  width: 50%;
+  height: 100%;
+}
+.should-know > h2 > span{
+  color: #89a653;
+
+}
+.should-know > h2 {
+  font-family: caveat;
+  font-size: 50px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+.should-know > h2 ,.should-know > p {
+  padding: 40px 60px;
+  max-width: 90%;
+  line-height: 30px;
+}
+/* contact-me-wrapper */
+.contact-me-wrapper{
+  width: 100%;
+  min-height: 500px;
+  background:linear-gradient(rgba(0, 0, 0, 0.7)
+  , rgba(0, 0, 0, 0.7)),
+   url(../images/cheese.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.contact-me-content{
+  width: 650px;
+  height: 300px;
+ 
+  display:flex ;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.contact-me-content>h3{
+  color: white;
+  font-size: 45px;
+  font-family: caveat;
+}
+.contact-me-content>p{
+  text-align: center;
+  color: white;
+}
+.contact-me-button{
+  width: 130px ;
+  height: 45px ;
+  border: 2px solid white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+
+}
+.btn-icon{
+  margin-left: 5px;
+  font-size: 12px;
+  margin-left: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+ 
+}
+.contact-me-button:hover{
+  width: 145px;
+}
+.contact-me-button:hover>i{
+  opacity: 1;
+  visibility: visible;
+  
+ 
+  
+}
+/* footer-top */
+.f-top-wrapper{
+  width: 100%;
+  min-height: 350px;
+  background-color: #719430;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 50px;
+     
+}
+.f-top-sections{
+  width: 32%;
+  padding: 70px 20px;
+  font-size: 16px;
+  line-height: 2em;
+  color: white;
+  font-family:open_sansregular;
+
+}
+.f-top-sections>h4{
+  font-size: 25px ;
+  margin-bottom: 20px;
+}
+/* footer-bottom */
+.f-bottom-wrapper{
+  width: 100%;
+  min-height: 80px;
+  background-color: #425719;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 75px;
+  color: white;
+  font-size: 12px;
+}
+.f-bottom-wrapper a{
+  color: white;
+  text-decoration: none;
+}
+.f-bottom-wrapper a:hover{
+  text-decoration: underline;
+}
+.f-bottom-right{
+  width: 350px;
+  
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a[class="icon-link"]{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a[class="icon-link"]:hover{
+  text-decoration: none;
+}
+.icon-link>i{
+  font-size: 20px;
+}
+.f-bottom-right>a:nth-last-child(3):hover{
+  background-color:	#1DA1F2 ;
+
+}
+.f-bottom-right>a:nth-last-child(2):hover{
+  background-color:	#4267B2 ;
+
+}
+.f-bottom-right>a:nth-last-child(1):hover{
+  background-color: #009EDC;
+
+}
+
+
+
+/* responsives */
+/* responsive for section 1 */
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 40px;
+  }
+  .about2 > p {
+    max-width: 150px;
+  }
+  .galerry-wrapper-img-box {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .box{
+    width: 90%;
+    max-width: 90%;
+  }
+  .box > p {
+    
+    max-width: 100%;
+}
+.f-bottom-wrapper{
+ 
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+}
+.f-bottom-right{
+  margin-top: 20px;
+}
+
+
+}
+/* responsive for section 2 */
+@media (max-width: 768px) {
+  nav {
+    background-color: white;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav > .logo-box1 {
+    display: none;
+  }
+  nav > .logo-box2 {
+    display: flex;
+    width: 300px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  nav > .logo-box2 > img {
+    width: 100%;
+    display: block;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 25px;
+  }
+  .content-wrapper {
+    width: 500px;
+    min-height: 250px;
+  }
+  .about2 {
+    width: 50%;
+    min-height: 500px;
+
+    background: url(../images/woman-enjoying-nature-outdoors-m-1-845x684.jpg)
+      no-repeat right center;
+    background-size: cover;
+    color: white;
+    padding: 100px;
+  }
+  .galerry-wrapper-img-box {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+  .img{
+    display: none;
+  }
+  .should-know{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .f-top-sections{
+    width: 95%;
+  }
+}
+/* responsive for section 3 */
+@media (max-width: 568px) {
+  @keyframes change {
+    0%,
+    40% {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/healthy-lifestyle-m.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    50%,
+    90% {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/yoga_me.jpg) no-repeat right center;
+      background-size: cover;
+    }
+  }
+  .header-btn-box {
+    margin-top: 50px;
+  }
+  header > div > p {
+    margin-top: 30px;
+  }
+  .about1,
+  .about2 {
+    width: 100%;
+  }
+}
